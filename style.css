@@ -103,17 +103,14 @@ h3 {
 
 .highlight-yellow {
   background: linear-gradient(to top, rgb(249, 183, 178, 0.6) 100%, transparent 80%);
-  /* Amarelo mais vivo */
 }
 
 .highlight-green {
   background: linear-gradient(to top, rgba(109, 231, 160, 0.6) 100%, transparent 80%);
-  /* Verde mais intenso */
 }
 
 .highlight-blue {
   background: linear-gradient(to top, rgba(208, 155, 235, 0.76) 100%, transparent 40%);
-  /* Azul mais puro */
 }
 
 
@@ -1078,4 +1075,16 @@ footer {
 
 #sobre.section {
   padding-top: 8rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
