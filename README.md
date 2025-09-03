@@ -4,7 +4,7 @@ Meu portfólio pessoal desenvolvido com **HTML, CSS e JavaScript**.
 Aqui apresento minhas **habilidades**, **experiências** e **projetos** de forma interativa e responsiva.  
 
 ## 🔗 Acesse Online
-👉 [Clique aqui para acessar](https://portifolio-final-lake.vercel.app/)
+👉 [Clique aqui para acessar](https://pedro-dev-nine.vercel.app/)
 
 ## 🚀 Tecnologias
 - HTML5  
