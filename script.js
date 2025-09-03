@@ -1,20 +1,31 @@
 document.documentElement.classList.remove("no-js");
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    
+
     function applySketchStyles() {
-        
+
+
+
         const skillColors = [
-            '#FFECB3', 
-            '#C8F7C5', 
-            '#B3E0FF', 
-            '#FFC0CB', 
-            '#E0BBE4', 
-            '#FFD8B3'  
+            '#FFECB3', // Amarelo claro
+            '#C8F7C5', // Verde menta
+            '#B3E0FF', // Azul bebê
+            '#FFC0CB', // Rosa claro
+            '#E0BBE4', // Lilás
+            '#FFD8B3', // Pêssego
+            '#F0D9FF', // Lavanda
+            '#BEE3DB', // Verde água
+            '#FFD6A5', // Laranja pastel
+            '#A9DEF9', // Azul céu
+            '#FAD2E1', // Rosa antigo
+            '#FFF2B2', // Amarelo manteiga
+            '#D4F0F0', // Aqua claro
+            '#C1E1C1', // Verde sálvia
+            '#FFBFB5'  // Coral suave
         ];
 
-        
+
         const skillCards = document.querySelectorAll('.skill-card');
         skillCards.forEach(card => {
             const randomColor = skillColors[Math.floor(Math.random() * skillColors.length)];
@@ -27,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.setProperty('--rotation-tape', randomTapeRotation);
         });
 
-        
+
         const toolCards = document.querySelectorAll('.tool-card');
         const toolColors = [
-            '#FFADAD', '#FFD6A5', '#FDFFB6', '#CAFFBF', 
+            '#FFADAD', '#FFD6A5', '#FDFFB6', '#CAFFBF',
             '#9BF6FF', '#A0C4FF', '#BDB2FF', '#FFC6FF'
         ];
         toolCards.forEach(card => {
@@ -43,30 +54,30 @@ document.addEventListener('DOMContentLoaded', function() {
             const randomTapeRotation = (Math.random() * 40 - 20).toFixed(1);
             card.style.setProperty('--rotation-tape', randomTapeRotation);
         });
-        
-        
+
+
         const philosophyCards = document.querySelectorAll('.philosophy-card');
         const philosophyColors = [
-            '#FFECB3', 
-            '#C8F7C5', 
-            '#B3E0FF'  
+            '#FFECB3',
+            '#C8F7C5',
+            '#B3E0FF'
         ];
 
         philosophyCards.forEach((card, index) => {
-            
+
             card.style.backgroundColor = philosophyColors[index % philosophyColors.length];
 
-            
-            const randomRotation = (Math.random() * 4 - 2).toFixed(1); 
+
+            const randomRotation = (Math.random() * 4 - 2).toFixed(1);
             card.style.transform = `rotate(${randomRotation}deg)`;
 
-            
-            const randomTapeRotation = (Math.random() * 30 - 15).toFixed(1); 
+
+            const randomTapeRotation = (Math.random() * 30 - 15).toFixed(1);
             card.style.setProperty('--rotation-tape', randomTapeRotation);
         });
 
 
-        
+
         const contactCards = document.querySelectorAll('.contact-card');
         contactCards.forEach(card => {
             const randomColor = skillColors[Math.floor(Math.random() * skillColors.length)];
@@ -79,12 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.setProperty('--rotation-tape', randomTapeRotation);
         });
 
-        
+
         const navLinks = document.querySelectorAll('.nav-links a');
         navLinks.forEach(link => {
             const randomColor = skillColors[Math.floor(Math.random() * skillColors.length)];
             link.style.backgroundColor = randomColor;
-            
+
             const randomRotation = (Math.random() * 8 - 4).toFixed(1);
             link.style.setProperty('--rotation', randomRotation);
 
@@ -92,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.style.setProperty('--rotation-tape', randomTapeRotation);
         });
 
-        
+
         const mobileLinks = document.querySelectorAll('.nav-links-mobile a');
         mobileLinks.forEach(link => {
             const randomColor = skillColors[Math.floor(Math.random() * skillColors.length)];
@@ -105,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     applySketchStyles();
 
-    
+
     if (document.getElementById("typed-text")) {
         new Typed("#typed-text", {
             strings: ["Java/Spring Boot.", "Python.", "JavaScript."],
@@ -116,8 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
             cursorChar: '|',
         });
     }
-    
-    
+
+
     const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinksMobile = document.querySelector(".nav-links-mobile");
 
@@ -135,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
+
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -152,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    
+
     const carouselContainer = document.querySelector('.carousel-container');
     if (!carouselContainer) return;
 
@@ -177,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const originalCards = Array.from(track.children).filter(card => !card.classList.contains('clone'));
         originalCardCount = originalCards.length;
-        
+
         if (originalCardCount === 0) return;
 
         for (let i = originalCardCount - 1; i >= originalCardCount - cloneCount && i >= 0; i--) {
@@ -231,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIndex = cloneCount;
             updatePosition(false);
         } else if (currentIndex < cloneCount) {
-            currentIndex = originalCardCount + cloneCount -1;
+            currentIndex = originalCardCount + cloneCount - 1;
             updatePosition(false);
         }
     };
